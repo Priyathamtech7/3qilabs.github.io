@@ -1,0 +1,113 @@
+<app-navbar></app-navbar>
+<div class="p-3 DashHello">
+  <p class="font-weight-bold">Default</p>
+  <div class="row">
+    <div class="col-3">Experiment ID:{{this.Detail.experiment_id}}</div>
+    <div class="col-9">Artifact Location:&nbsp; {{this.Detail.artifact_location}}</div>
+  </div>
+  <div class="row">
+    <div class="col-9">
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Search</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="metrices">
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="d-flex justify-content-around">
+        <!-- <div class="form-group row">
+          <div class="col-sm-10">
+            <div class="dropdown ">
+              <button type="button" class=" btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                Choose
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                <a class="dropdown-item">Active</a>
+                <a class="dropdown-item">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div>
+          <button type="button" class="btnCss btn btn-primary" *ngIf="this.Detail.lifecycle_stage === 'active'">Active</button>
+          <button type="button" class="btnCss btn btn-primary" *ngIf="this.Detail.lifecycle_stage === ''">In Active</button>
+        </div>
+        <div>
+          <button type="button" class="btnCss btn btn-primary">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-5">
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Search</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="metrices">
+        </div>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Search</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="metrices">
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btnCss btn btn-secondary">Clear</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 p-2">1 maching run</div>
+    <div class="col-2">
+      <button type="button" class="btnCss btn btn-primary">compare</button>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btnCss btn btn-secondary">delete</button>
+    </div>
+    <div class="col-5">
+      <button type="button" class="btnCss btn btn-light">Download CSV</button>
+    </div>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" [(ngModel)]="multiselect.select">
+            <label class="form-check-label" for="defaultCheck1">
+            </label>
+          </div>
+        </th>
+        <th scope="col">Date</th>
+        <th scope="col">User</th>
+        <th scope="col">Run Name</th>
+        <th scope="col">Source</th>
+        <th scope="col">Version</th>
+        <th scope="col">Parameters</th>
+        <th scope="col">Metrics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" [(ngModel)]="multiselect.select">
+            <label class="form-check-label" for="defaultCheck1">
+            </label>
+          </div>
+        </th>
+        <td>na</td>
+        <td>na</td>
+        <td>{{this.Detail.name}}</td>
+        <td>na</td>
+        <td>na</td>
+        <td>na</td>
+        <td>na</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

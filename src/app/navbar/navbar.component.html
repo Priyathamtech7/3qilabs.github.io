@@ -1,0 +1,9 @@
+<nav class="navbar navbar-dark " style="height: 55px;background-color: #082042 !important">
+  <div class="d-flex justify-content-between">
+    <div class="text-white font-weight-bold">Test</div>
+  </div>
+</nav>
+<div class="sidebar">
+  <div class="text-center p-2 font-weight-bold">Experiments</div>
+  <a class="p-2 cursor-pointer" *ngFor="let item of experimentlist.experiments" (click)="getCorrectId(item.experiment_id)">Experiment &nbsp;{{item.experiment_id}}</a>
+</div>
